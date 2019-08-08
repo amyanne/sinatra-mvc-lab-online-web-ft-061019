@@ -4,7 +4,8 @@ class PigLatinizer
     string_array = string.split(" ")
     piglatin_array = []
     string_array.each do |word|
-      word << %w(a e i o u).include?(word[0]) ?
+      word_array = word.split("")
+      if word_array[0]
       
   end
   
