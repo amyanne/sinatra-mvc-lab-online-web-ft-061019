@@ -5,7 +5,9 @@ class PigLatinizer
     piglatin_array = []
     string_array.each do |word|
       word_array = word.split("")
-      if word_array[0]
+      if word_array[0].match(/[aeiouAEIOU]/)
+        word = word_array.join
+        word << "ay"
       
   end
   
