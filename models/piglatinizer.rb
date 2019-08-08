@@ -1,6 +1,6 @@
 class PigLatinizer
   
-  def turn_string_piglatin(string)
+  def piglatinized(string)
     string_array = string.split(" ")
       
       piglatinized = string_array.map do |word|
