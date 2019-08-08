@@ -2,22 +2,14 @@ class PigLatinizer
   
   def turn_string_piglatin(string)
     string_array = string.split(" ")
-    piglatin_array = []
-    index = 0
-    string_array.each do |word|
-      word_array = word.split("")
-      if word_array[0].match(/[aeiouAEIOU]/)
-        word = word_array.join
-        word << "way"
-      else 
-        while word_array[index].match(/[b-df-hj-np-tv-zB-DF-HJ-NP-TV-Z]/)
-          
-          index += 1 
-        end 
-        word_array
-      end 
-    end 
       
-  end
-  
+      piglatinized = string_array.map do |word|
+         word_array = word.split("")
+         #find the position of the first vowel
+         first_vowel_position = word_array.index {|letter| letter.match(/[aeiouAEIOU]/)}
+         #the below ternary does this
+         # if the first vowel is not in the first position (greater than 0) then the consonant rules need to be applied, else it does have the first position and the vowel rules apply (when vowel's start the word)
+         first_vowel_position > 0 ? word[first_vowel_position..word.length] + word[0..(first_vowel_position - 1)] + "ay" : word + "way"
+      end
+      piglatinized.join(" "
 end 
