@@ -11,10 +11,12 @@ class PigLatinizer
         word << "way"
       else 
         while word_array[index].match(/[b-df-hj-np-tv-zB-DF-HJ-NP-TV-Z]/)
-        
+          
           index += 1 
         end 
         word_array
+      end 
+    end 
       
   end
   
