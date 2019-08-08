@@ -4,7 +4,7 @@ class PigLatinizer
     string_array = string.split(" ")
     piglatin_array = []
     index = 0
-    ?
+    
     end 
       
   end
