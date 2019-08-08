@@ -1,5 +1,6 @@
 class PigLatinizer
   
-  def 
+  def turn_string_piglatin
+  end
   
 end 
