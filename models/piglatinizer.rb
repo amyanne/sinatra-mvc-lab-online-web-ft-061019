@@ -12,4 +12,5 @@ class PigLatinizer
          first_vowel_position > 0 ? word[first_vowel_position..word.length] + word[0..(first_vowel_position - 1)] + "ay" : word + "way"
       end
       piglatinized.join(" ")
+    end 
 end 
